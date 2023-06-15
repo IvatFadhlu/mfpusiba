@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <title>Form Input</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="mt-4">Form Input</h2>
+      <form action="/registdatauser" method="post">
+        <div class="mb-3">
+          <label for="nomorpendaftaran" class="form-label">Nomor Pendaftaran</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nomorpendaftaran"
+            id="nomorpendaftaran"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="namalengkap" class="form-label">Nama Lengkap</label>
+          <input
+            type="text"
+            class="form-control"
+            name="namalengkap"
+            id="namalengkap"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="nomorjulus" class="form-label">Nomor Julus</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nomorjulus"
+            id="nomorjulus"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+
+        <!-- Sisipkan input fields untuk semua kolom lainnya -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<div style="margin-top: 30px">
+  <a class="btn btn-primary btn-lg active" href="/">Beranda</a>
+</div>
+
+<div style="margin-top: 30px">
+  <a class="btn btn-primary btn-lg active" href="/logout">Log Out</a>
+</div>
+
+<div style="margin-top: 30px">
+  <a class="btn btn-primary btn-lg active" href="/registdatauser">Formulir Links</a>
+</div><br />
+
+<form action="/cariNomorJulus" method="GET">
+  <input type="text" name="nomorjulus" placeholder="Nomor Julus" />
+  <button type="submit">Cari</button>
+</form>
+<br />
+
+<br />
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link disabled"
+      href="#"
+      tabindex="-1"
+      aria-disabled="true"
+    >Disabled</a>
+  </li>
+</ul>
+
+<div class="container shadow p-3 mb-5 bg-body rounded">
+  <div>
+    {{#each data}}
+      <div class="bg-light">
+        <div>
+          <div class="card-body">
+            {{!-- <h5 class="card-title">{{this.namalengkap}}</h5><br> --}}
+            <h5 class="card-tittle">Biodata Diri</h5><br />
+            <p class="card-text">Nama: {{this.namalengkap}}</p>
+            <p class="card-text">Nomor Pendaftaran:
+              {{this.nomorpendaftaran}}</p>
+            <p class="card-text">Nomor Julus: {{this.nomorjulus}}</p>
+            <p class="card-text">Lajnah: {{this.lajnah}}</p>
+            <p class="card-text">Nama Dalam Bahasa Arab: {{this.namaarab}}</p>
+            <p class="card-text">Jenis Kelamin: {{this.jeniskelamin}}</p>
+            <p class="card-text">Tempat Lahir: {{this.tempatlahir}}</p>
+            <p class="card-text">Tanggal Lahir: {{this.tanggallahir}}</p>
+            <p class="card-text">NIK: {{this.nik}}</p>
+            <p class="card-text">Status Pernikahan:
+              {{this.statuspernikahan}}</p>
+            <p class="card-text">Riwayat Penyakit: {{this.riwayatpenyakit}}</p>
+            <p class="card-text">Facebook: {{this.facebook}}</p>
+            <p class="card-text">Instagram: {{this.instagram}}</p>
+            <p class="card-text">Twitter: {{this.twitter}}</p>
+            <p class="card-text">Email: {{this.email}}</p>
+            <p class="card-text">Nomor HP: {{this.nomorhp}}</p>
+            <p class="card-text">Nomor WA: {{this.nomorwa}}</p>
+            <p class="card-text">Alamat Rumah: {{this.alamatrumah}}</p>
+            <p class="card-text">Kode Pos: {{this.kodepos}}</p>
+            <p class="card-text">Nama Provinsi: {{this.namaprovinsi}}</p>
+            <p class="card-text">Nama Kota: {{this.namakota}}</p>
+            <p class="card-text">Nama Kecamatan: {{this.namakecamatan}}</p>
+            <p class="card-text">Nama Ayah: {{this.namaayah}}</p>
+            <p class="card-text">Nama Ayah dalam Bahasa Arab:
+              {{this.namaayaharab}}</p>
+            <p class="card-text">Nama Ibu: {{this.namaibu}}</p>
+            <p class="card-text">Nama Ibu dalam Bahasa Arab:
+              {{this.namaibuarab}}</p>
+            <p class="card-text">Nama Kakek: {{this.namakakek}}</p>
+            <p class="card-text">Nama Kakek dalam Bahasa Arab:
+              {{this.namakakekarab}}</p>
+            <p class="card-text">Nomor HP Orang Tua: {{this.nomorhportu}}</p>
+            <p class="card-text">Pekerjaan Orang Tua: {{this.pekerjaanortu}}</p>
+            <p class="card-text">Penghasilan Orang Tua:
+              {{this.penghasilanortu}}</p>
+            <p class="card-text">Sekolah SD: {{this.sekolahsd}}</p>
+            <p class="card-text">Tahun Lulus SD: {{this.tahunlulussd}}</p>
+            <p class="card-text">Sekolah SMP: {{this.sekolahsmp}}</p>
+            <p class="card-text">Tahun Lulus SMP: {{this.tahunlulussmp}}</p>
+            <p class="card-text">Sekolah MA: {{this.sekolahma}}</p>
+            <p class="card-text">Tahun Lulus MA: {{this.tahunlulusma}}</p>
+            <p class="card-text">Foto Ijazah: {{this.fotoijazah}}</p>
+            <p class="card-text">Foto SKL: {{this.fotoskl}}</p>
+            <p class="card-text">Foto KTP: {{this.fotoktp}}</p>
+            <p class="card-text">Status Bayar: {{this.statusbayar}}</p>
+            <p class="card-text">Jurusan: {{this.jurusan}}</p>
+            <p class="card-text">Berangkat Melalui:
+              {{this.berangkatmelalui}}</p>
+            <p class="card-text">Opsi Berangkat Lainnya:
+              {{this.opsiberangkatlainnya}}</p>
+            <br />
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data User</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Data User</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nomor Pendaftaran</th>
+          <th>Nama Lengkap</th>
+          <th>Nomor Julus</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <td>{{this.nomorpendaftaran}}</td>
+          <td>{{this.namalengkap}}</td>
+          <td>{{this.nomorjulus}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+ --}}

@@ -1,0 +1,71 @@
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-text d-block text-center mx-auto">
+        <em>Link Pembayaran Madinatul Fusha - PUSIBA</em>
+      </span>
+    </div>
+  </nav>
+
+</div>
+
+{{!  }}
+
+<div class="card bg-gradient mx-auto ps-5 pe-5">
+  {{! <img src="/images/grandsyaikh1.jpg" class="card-img" /> }}
+  <div class="card-img-overlay">
+    {{! <form
+      class="d-flex justify-content-center align-items-start"
+      action="/caridata/mf"
+      method="GET"
+    >
+      <div class="input-group">
+        <input
+          class="form-control me-2"
+          type="text"
+          name="nomorjulus"
+          placeholder="Cari Berdasarkan Nomor Julus Anda"
+        />
+        <button class="btn btn-outline-success" type="submit">Cari</button>
+      </div>
+    </form> }}
+
+    <form
+      class="d-flex justify-content-center align-items-start"
+      action="/caridata/mf"
+      method="GET"
+    >
+      <div class="input-group mt-5">
+        <input
+          class="form-control"
+          type="text"
+          name="nomorjulus"
+          placeholder="Cari Berdasarkan Nomor Julus Anda"
+        />
+        <button class="btn btn-primary px-4 fw-bold" type="submit">Cari Data</button>
+      </div>
+    </form>
+
+    <br />
+
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+      <div>
+        {{#each data}}
+          <div class="bg-light">
+            <div>
+              <div class="card-body">
+                <h5 class="card-tittle">Data Anda Sudah Siap</h5><br />
+                <h6 class="card-text">Nama : {{this.nama}}</h6>
+                <h6 class="card-text">Raqm Julus : {{this.nomorjulus}}</h6>
+                <h6 class="card-text">Nomor Pembayaran : {{this.nomorva}}</h6>
+                <p class="fst-italic mt-4">"Silahkan lakukan pembayaran ke nomor
+                  Virtuan Account yang tertera
+                  <br />Pastikan bahwa data sudah sesuai."</p>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
